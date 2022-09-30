@@ -1,0 +1,29 @@
+
+version: 2
+
+models:
+    - name: green_taxi_trip_q2_facts
+      tags: ["Facts"]
+      description: "Facts table for green taxi trip historical data"
+      columns:
+          - name: tripID
+            description: "Code defining the trip code"
+            tests:
+                - unique
+                - not_null
+          - name: vendorID
+            description: "A code indicating the LPEP provider that provided the record"
+            tests:
+                - not_null
+          - name: RatecodeID
+            description: "A code indicating the LPEP provider that provided the record"
+            tests:
+                - not_null
+          - name: PULocationID
+            description: "TLC Taxi Zone in which the taximeter was engaged"
+            tests:
+                - not_null
+          - name: DOLocationID
+            description: "TLC Taxi Zone in which the taximeter was disengaged"
+            tests:
+                - not_null

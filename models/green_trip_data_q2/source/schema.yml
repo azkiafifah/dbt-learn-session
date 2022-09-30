@@ -1,0 +1,17 @@
+
+version: 2
+
+sources:
+    - name: dbt_aafifah
+      tags: ["Source"]
+      description: "Source Table"
+      database: data-fellowship-7
+      tables:
+          - name: green_tripdata_full
+            description: "Green taxi trip historical data"
+            columns:
+                 - name: tripID
+                   description: "The primary key for this table"
+                   tests:
+                        - unique
+                        - not_null  
